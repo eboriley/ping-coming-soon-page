@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh;
+}
+
+.logo{
+    height: 20px;
+    margin-top: 50px;
+}
+
+h1{
+    font-weight: 200;
+    margin-bottom: 0;
+    color: hsl(0, 0%, 59%);
+}
+
+strong{
+    font-weight: 600;
+    color: #000;
+}
+
+p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+small{
+    font-size: 0.7rem;
+    color: hsl(0, 0%, 59%);
+}
+.form{
+    position: relative;
+}
+.form input{
+    border: 1px solid hsl(0, 0%, 59%);
+    border-radius: 50px;
+    height: 35px;
+    width: 300px;
+    padding-left: 20px;
+}
+
+.form input:focus{
+    outline: none;
+}
+
+.form.error input{
+    border: 1px solid hsl(354, 100%, 66%);
+}
+.form small{
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    margin: 5px;
+    font-size: 0.7rem ;
+    visibility: hidden;
+}
+
+.form.error small{
+    color: hsl(354, 100%, 66%);
+    visibility: visible;
+}
+.form button{
+    border: 1px none;
+    border-radius: 50px;
+    height: 35px;
+    width: 100px;
+    background-color: hsl(223, 87%, 63%);
+    color: #fff;
+    box-shadow: -2px 0px 10px 3px hsla(223, 87%, 63%, 0.3);
+    margin: 0 5px;
+    font: inherit;
+    font-size: 0.8rem ;
+}
+
+.form button:hover{
+    cursor: pointer;
+}
+
+.form button:focus{
+    outline: none;
+}
+
+.dashboard{
+    margin-top: 50px;
+    width: 450px;
+    height: 250px;
+    margin-bottom: 30px;
+}
+
+.icons{
+    margin: 10px;
+    display: flex;
+}
+
+.icons i{
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin: 2px;
+    font-size: 0.8rem;
+    color: hsl(223, 87%, 63%);
+}
+
+.icons i:hover{
+color: #fff;
+background-color: hsl(223, 87%, 63%);
+}
+
+@media screen and (max-width:411px){
+    .form{
+        position: unset;
+    }
+    .form small{
+        display: none;
+        position: unset;
+        text-align: center;
+    }
+
+    .form.error small{
+        display: block;
+    }
+
+    .form input{
+        margin-bottom: 5px;
+    }
+    .form button{
+        position: unset;
+        display: block;
+        width: 300px;
+        margin: 0;
+    }
+    h1{
+        text-align: center;
+        font-size: 1.4rem;
+    }
+    
+    strong{
+        text-align: center;
+    }
+    
+    p{
+        text-align: center;
+    }
+    small{
+        font-size: 0.7rem;
+    }
+
+    .dashboard{
+        margin-top: 40px;
+        width: 350px;
+        height: 200px;
+        margin-bottom: 25px;
+    }
+}
